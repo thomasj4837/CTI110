@@ -18,6 +18,14 @@ cursor.execute("DROP TABLE IF EXISTS users")
 cursor.execute("""
 CREATE TABLE users (
     user_id INTEGER PRIMARY KEY,
+    first_name TEXT,
+    last_name TEXT,
+    email TEXT,
+    username TEXT,
+    password_hash TEXT,
+    signup_date DATE,
+    country TEXT,
+    age INTEGER
 )""")
 
 # STEP 2: Insert sample fake users
@@ -26,7 +34,17 @@ CREATE TABLE users (
 # Each user has 8 values, in this order (user_id is NOT included):
 # first_name, last_name, email, username, password_hash, signup_date, country, age
 
-users = [('Naruto', 'Uzamaki', 'ramen@example.com', 'naruto_u', 'LoveRamen1', '2026-06-01', 'JAPAN', 16),]
+users = [('Naruto', 'Uzamaki', 'ramen@example.com', 'naruto_u', 'LoveRamen1', '2026-06-01', 'JAPAN', 16),
+         ('Sakura', 'Haruno', 'sakura@example.com', 'sakura_h', 'CherryBlossom2', '2026-06-03', 'JAPAN', 17),
+         ('Sasuke', 'Uchiha', 'sasuke@example.com', 'sasuke_u', 'Sharingan3', '2026-06-05', 'JAPAN', 17),
+         ('Kakashi', 'Hatake', 'kakashi@example.com', 'kakashi_h', 'HiddenLeaf4', '2026-06-08', 'JAPAN', 29),
+         ('Hinata', 'Hyuga', 'hinata@example.com', 'hinata_h', 'Byakugan5', '2026-06-10', 'JAPAN', 16),
+         ('Goku', 'Son', 'goku@example.com', 'goku_s', 'SaiyanPower6', '2026-06-12', 'USA', 35),
+         ('Vegeta', 'Prince', 'vegeta@example.com', 'vegeta_p', 'PrinceOfSaiyans7', '2026-06-15', 'USA', 38),
+         ('Ash', 'Ketchum', 'ash@example.com', 'ash_k', 'Pikachu8', '2026-06-18', 'USA', 14),
+         ('Misty', 'Waterflower', 'misty@example.com', 'misty_w', 'Cerulean9', '2026-06-20', 'USA', 15),
+         ('Bulbasaur', 'Kanto', 'bulbasaur@example.com', 'bulbasaur_k', 'VineWhip10', '2026-06-22', 'USA', 10)]
+
 
 
 #------------------------------------------------------------------------------------
