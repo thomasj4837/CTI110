@@ -81,7 +81,7 @@ if pennies > 1:
 
 import random
 
-def disperse_change (change) :
+# def disperse_change (change) :
 
 
 def main () :
